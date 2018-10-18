@@ -1,0 +1,6 @@
+﻿  winmisc.c
+d:\workspace\project\putty-src\windows\winmisc.c(204): warning C4996: 'GetVersionExA': was declared deprecated
+  d:\windows kits\10\include\10.0.17134.0\um\sysinfoapi.h(378): note: see declaration of 'GetVersionExA'
+  version.c
+  Generating Code...
+  testbn.vcxproj -> D:\workspace\project\putty-src\windows\VS2012\testbn\.\Debug\testbn.exe

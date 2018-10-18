@@ -1,0 +1,38 @@
+﻿  winser.c
+  winmisc.c
+d:\workspace\project\putty-src\windows\winmisc.c(204): warning C4996: 'GetVersionExA': was declared deprecated
+  d:\windows kits\10\include\10.0.17134.0\um\sysinfoapi.h(378): note: see declaration of 'GetVersionExA'
+  window.c
+d:\windows kits\10\include\10.0.17134.0\um\multimon.h(185): warning C4996: 'GetVersionExA': was declared deprecated
+  d:\windows kits\10\include\10.0.17134.0\um\sysinfoapi.h(378): note: see declaration of 'GetVersionExA'
+d:\workspace\project\putty-src\windows\window.c(835): error C2065: 'IDM_OPENCLOSE': undeclared identifier
+d:\workspace\project\putty-src\windows\window.c(2440): error C2065: 'IDM_OPENCLOSE': undeclared identifier
+d:\workspace\project\putty-src\windows\window.c(2440): error C2051: case expression not constant
+  windlg.c
+  version.c
+  terminal.c
+d:\workspace\project\putty-src\terminal.c(3525): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3534): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3550): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3556): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3563): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3570): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3578): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3585): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3596): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3597): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3634): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3637): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+d:\workspace\project\putty-src\terminal.c(3642): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3652): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3658): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3659): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+d:\workspace\project\putty-src\terminal.c(3736): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(3737): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(4093): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(4101): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(4104): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+d:\workspace\project\putty-src\terminal.c(4144): warning C4018: '>': signed/unsigned mismatch
+d:\workspace\project\putty-src\terminal.c(4178): warning C4018: '>': signed/unsigned mismatch
+  logging.c
+  Generating Code...

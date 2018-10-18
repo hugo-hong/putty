@@ -1,0 +1,25 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2018.10.18 09:27:38 =~=~=~=~=~=~=~=~=~=~=~=
+setup nvram ids: net_key_max_num:4 app_key_max_num:8 nvm_idx_seq:35 36-75
+[2018-10-18 09:27:38:0488]Mesh Start
+[2018-10-18 09:27:38:0508]***** Free mem before app_init:27916
+[2018-10-18 09:27:38:0515]## mesh_application_init ##
+[2018-10-18 09:27:38:0519]wiced_bt_gatt_register: 0
+[2018-10-18 09:27:38:0524]ds1:0x00004000, len:0x0003e000
+[2018-10-18 09:27:38:0526]ds2:0x00042000, len:0x0003e000
+[2018-10-18 09:27:38:0528]platform btp: Config_DS_Location 0x00004000, Config_VS_Location:0x00002000 
+[2018-10-18 09:27:38:0534]mesh_application_init: provisioned GATT DB status:0
+[2018-10-18 09:27:38:0540]mesh_light_server_message_handler:msg=65,opcode=0xffff
+[2018-10-18 09:27:38:0545][mesh_scene]mesh_scene_init:is_provisioned:1,tag=1296388936
+[2018-10-18 09:27:38:0547][LSL_LIGHT]lsl_init:version:v1.0.0 build:Oct 17 2018 - 15:29:35
+[2018-10-18 09:27:38:0549][LSL_LIGHT]transformHSL2PWM:hue=0,sat=246,level=104
+[2018-10-18 09:27:38:0551][LSL_LIGHT]drivePWM:w=0,r=46,g=1,b=0,tt=18
+[2018-10-18 09:27:38:0552]***** Free mem after app_init:24736
+[2018-10-18 09:27:38:0554][LSL_LIGHT]lc_reset_timer_cb:reset seg=0
+[2018-10-18 09:27:38:0555][LSL_LIGHT]lc_reset_timer_cb:reset count=0
+[2018-10-18 09:27:38:0556][LSL_LIGHT]transformIntensity2PWM:desIntensity=0,curIntensity=0,delta=0,color=0
+[2018-10-18 09:27:38:0559][LSL_LIGHT]transformIntensity2PWM:desIntensity=46,curIntensity=0,delta=46,color=1
+[2018-10-18 09:27:38:0563][LSL_LIGHT]transformIntensity2PWM:desIntensity=1,curIntensity=0,delta=1,color=2
+[2018-10-18 09:27:38:0566][LSL_LIGHT]transformIntensity2PWM:desIntensity=0,curIntensity=0,delta=0,color=3
+[2018-10-18 09:27:38:0569][mesh_scene]task_action_cb:task action=1
+[2018-10-18 09:27:38:0575][mesh_scene]task_action_cb:task action=2
+[2018-10-18 09:27:38:0576][LSL_LIGHT]lc_reset_timer_cb:reset seg=1
