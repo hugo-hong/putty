@@ -280,10 +280,11 @@ static void start_backend(void)
 	exit(0);
     }
     window_name = icon_name = NULL;
-    title = conf_get_str(conf, CONF_wintitle);
-    if (!*title) {
-	sprintf(msg, "%s - %s", realhost, appname);
-	title = msg;
+	sprintf(msg, "%s - %s", realhost, appname);	
+	title = conf_get_str(conf, CONF_wintitle);
+    if (strcmp(msg, title) != 0) {
+		title = msg;
+		conf_set_str(conf, CONF_wintitle, title);
     }
     sfree(realhost);
     set_title(NULL, title);
@@ -2262,9 +2263,9 @@ static LRESULT CALLBACK WndProc(HWND hwnd, UINT message,
 		    do_reconfig(hwnd, back ? back->cfg_info(backhandle) : 0);
 		reconfiguring = FALSE;
 		if (!reconfig_result) {
-                    conf_free(prev_conf);
-		    break;
-                }
+			conf_free(prev_conf);
+			break;
+        }
 
 		conf_cache_data();
 

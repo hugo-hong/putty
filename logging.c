@@ -11,6 +11,8 @@
 
 #include "putty.h"
 
+extern Conf *conf;		       /* defined in window.c */
+
 /* log session to file stuff ... */
 struct LogContext {
     FILE *lgfp;
@@ -448,14 +450,15 @@ static Filename *xlatlognam(Filename *src, char *hostname, int port,
     s = filename_to_str(src);
 
     while (*s) {
-        int sanitise = FALSE;
+    int sanitise = FALSE;
 	/* Let (bufp, len) be the string to append. */
 	bufp = buf;		       /* don't usually override this */
 	if (*s == '&') {
 	    char c;
 	    s++;
 	    size = 0;
-	    if (*s) switch (c = *s++, tolower((unsigned char)c)) {
+	    if (*s) 
+		switch (c = *s++, tolower((unsigned char)c)) {
 	      case 'y':
 			size = strftime(buf, sizeof(buf), "%Y", tm);
 			break;
@@ -469,17 +472,26 @@ static Filename *xlatlognam(Filename *src, char *hostname, int port,
 			size = strftime(buf, sizeof(buf), "%H:%M:%S", tm);
 			break;
 	      case 'h':
-			bufp = hostname;
+			  if (conf_get_int(conf, CONF_protocol) == PROT_SERIAL)
+				  strcpy(bufp, "COM");			  
+			  else
+				bufp = hostname;
 			size = strlen(bufp);
 			break;
 	      case 'p':
-                size = sprintf(buf, "%d", port);
+			if (conf_get_int(conf, CONF_protocol) == PROT_SERIAL) {
+				char *serline = conf_get_str(conf, CONF_serline);
+				sscanf(serline, "COM%s", buf);
+				size = strlen(buf);
+			}
+			else
+				size = sprintf(buf, "%d", port);
 			break;
-			  default:
-		buf[0] = '&';
-		size = 1;
-		if (c != '&')
-		    buf[size++] = c;
+			default:
+				buf[0] = '&';
+				size = 1;
+				if (c != '&')
+					buf[size++] = c;
 	    }
             /* Never allow path separators - or any other illegal
              * filename character - to come out of any of these
